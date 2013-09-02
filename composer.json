@@ -1,0 +1,22 @@
+{
+    "name": "knifecake/outmess",
+    "description": "Keep track of outcome messages easily.",
+		"license": "MIT",
+    "authors": [
+        {
+            "name": "Elias Hernandis",
+            "email": "eliashernandis@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Knifecake\\Outmess": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+		"keywords": ["laravel", "laravel4", "messages", "views"]
+}

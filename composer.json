@@ -1,6 +1,8 @@
 {
     "name": "knifecake/outmess",
+		"type": "library",
     "description": "Keep track of outcome messages easily.",
+		"keywords": ["laravel", "laravel4", "messages", "views"],
 		"license": "MIT",
     "authors": [
         {
@@ -17,6 +19,5 @@
             "Knifecake\\Outmess": "src/"
         }
     },
-    "minimum-stability": "dev",
-		"keywords": ["laravel", "laravel4", "messages", "views"]
+    "minimum-stability": "dev"
 }

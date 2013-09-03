@@ -58,8 +58,12 @@ class Outmess
 		$this->config = $config;
 		$this->session = $session;
 
+		// load the default style and look for available types
 		$this->style = $this->config->get('outmess::style');
 		$this->types = $this->types();
+
+		// load previous messages if any
+		$this->messages = $this->session->get('outmessages', array());
 	}
 
 	/**

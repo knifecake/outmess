@@ -19,16 +19,6 @@ class OutmessServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->package('knifecake/outmess');
-
-		// Bring the application container into the local scope so we can
-		// import it into the filters scope
-		$app = $this->app;
-
-		$this->app->close(function() use ($app)
-		{
-			// preserve messages in session
-			$app['outmess']->flash();
-		});
 	}
 
 	/**

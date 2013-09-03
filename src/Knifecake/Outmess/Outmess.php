@@ -86,8 +86,11 @@ class Outmess
 
 		$output = '';
 
-		foreach ($this->messages as $message)
+		foreach ($this->messages as &$message)
 			$output .= $this->renderOne($message);
+
+		// delete all the messages
+		$this->messages = array();
 
 		return $output;
 	}

@@ -9,7 +9,7 @@ Add the following to your ```composer.json``` file:
 ```
 "require": {
   ...
-  "knifecake/outmess": "0.x"
+  "knifecake/outmess": "1.0.x"
 },
 ````
 
@@ -26,6 +26,12 @@ And this under the ```aliases``` array:
   ...
   'Outmess' => 'Knifecake\Outmess\Facades\Outmess',
   ...
+```
+
+If you want to preserve messages for one more request (i.e. flashing them). Add this to your after filter in the ```filters.php``` file:
+
+```
+	Outmess::flash();
 ```
 
 ## Setting up a new style

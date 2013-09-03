@@ -50,3 +50,7 @@ To chose what style you want to use change the 'style' config value to the name 
 ## Outputting the messages
 
 To output your messages using the style you have chosen call ```Outmess::render()```. This method outputs a string of HTML so it may be called on a view, for example atop a page. If you did not add any messages this method won't output anything so no worries if you call it without checking first.
+
+## Contributing and reporting bugs
+
+Want a new feature? Something wrong? Any questions? Head to https://github.com/knifecake/outmess and make a pull request or create a new issue.

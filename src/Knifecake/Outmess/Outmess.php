@@ -1,6 +1,7 @@
 <?php namespace Knifecake\Outmess;
 
 use Illuminate\Config\Repository;
+use Illuminate\Session\Store;
 
 /**
  * Handles creation and rendering of messages.
@@ -43,11 +44,20 @@ class Outmess
 	protected $config;
 
 	/**
+	 * Illuminate session store.
+	 *
+	 * @var Illuminate\Config\Repository
+	 **/
+	protected $session;
+
+	/**
 	 * Load configuration for the messager.
 	 **/
-	public function __construct(Repository $config)
+	public function __construct(Repository $config, Store $session)
 	{
 		$this->config = $config;
+		$this->session = $session;
+
 		$this->style = $this->config->get('outmess::style');
 		$this->types = $this->types();
 	}
@@ -90,6 +100,14 @@ class Outmess
 
 		// reload the available types for the style
 		$this->types = $this->types();
+	}
+
+	/**
+	 * Flashes messages to session for next request.
+	 **/
+	public function flash()
+	{
+		$this->session->flash('outmessages', $this->messages);
 	}
 
 	/**

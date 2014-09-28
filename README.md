@@ -1,6 +1,6 @@
 # Laravel Outcome Outmess
 
-This package allows you to add messages depending on the outcome of processes, such as updating a user or deleting a menu item. Then you may retrieve all those messages at once and format them in HTMl according to the configuration you have set, which may depend, for instance, on the UI framework you are using.
+This package allows you to add messages depending on the outcome of processes, such as updating a user or deleting a menu item. Then you may retrieve all those messages at once and format them in HTML according to the configuration you have set, which may depend, for instance, on the UI framework you are using.
 
 ## Installation
 
@@ -9,11 +9,11 @@ Add the following to your ```composer.json``` file:
 ```
 "require": {
   ...
-  "knifecake/outmess": "0.x"
+  "knifecake/outmess": "1.*"
 },
 ````
 
-Add the following to your Service Provider array in Laravel's ```app/config/app.php```:
+Add the following to your Service Provider array in ```app/config/app.php```:
 
 ```
   ...
